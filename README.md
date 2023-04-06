@@ -127,7 +127,7 @@ To run tests, run the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [math-magicians](https://github.com/torobucci/math-magicians/issues).
+Feel free to check the [Book Store issues](https://github.com/torobucci/book-store-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
