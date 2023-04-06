@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const links = [
-  { path: '/', text: 'Home' },
+  { path: '/', text: 'Books' },
   { path: 'categories', text: 'Categories' },
 ];
 function NavBar() {
