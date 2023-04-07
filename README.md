@@ -14,7 +14,7 @@
     - [Install](#install)
     - [Usage](#usage)
     - [Run tests](#run-tests)
-  - [👥 Author Kevin Toro](#-author-kevin-toro)
+  - [👥 Author: Kevin Toro](#-author-kevin-toro)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -104,9 +104,9 @@ To run tests, run the following command:
 
 ## 👥 Author: <a name="authors">Kevin Toro</a>
 
-- GitHub: [@torobucii](https://github.com/torobucii)
+- GitHub: [@torobucii](https://github.com/torobucci)
 - Twitter: [@torobucii](https://twitter.com/@torobucii)
-- LinkedIn: [Kevin Toro](https://linkedin.com/in/KevinToro)
+- LinkedIn: [Kevin Toro](https://www.linkedin.com/in/kevin-toro-047181238/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
