@@ -2,7 +2,7 @@ function AddBook() {
   return (
     <div>
       <h2>Add book</h2>
-      <form>
+      <form style={{ display: 'flex', gap: '40px' }}>
         <input type="text" placeholder="add book name" />
         <input type="text" placeholder="add author of book" />
         <button type="submit">Add book</button>

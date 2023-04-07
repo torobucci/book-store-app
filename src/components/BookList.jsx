@@ -19,6 +19,11 @@ function BookList() {
         <div key="book">
           <h3>{book.title}</h3>
           <p>{book.author}</p>
+          <div style={{ display: 'flex', gap: '20px' }}>
+            <button type="button">Comment</button>
+            <button type="button">Remove</button>
+            <button type="button">Edit</button>
+          </div>
         </div>
       ))}
     </div>
