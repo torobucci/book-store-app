@@ -1,28 +1,19 @@
+import { useSelector } from 'react-redux';
+import RemoveBtn from './RemoveBtn';
+
 function BookList() {
-  const books = [{
-    title: 'pride and prejudice',
-    author: 'jane austen',
-  }, {
-    title: 'unleash man within',
-    author: 'sathiya sam',
-  }, {
-    title: 'Man with a plan',
-    author: 'Matt Le Blanc',
-  }, {
-    title: 'Breaking Bad',
-    author: 'Vince Gilligan',
-  }];
+  const { books } = useSelector((state) => state.books);
 
   return (
     <div className="bookList container">
       {books.map((book) => (
-        <div key="book">
+        <div key={book.item_id}>
           <h3>{book.title}</h3>
           <p>{book.author}</p>
           <div style={{ display: 'flex', gap: '20px' }}>
             <button type="button">Comment</button>
-            <button type="button">Remove</button>
             <button type="button">Edit</button>
+            <RemoveBtn bookId={book.item_id} />
           </div>
         </div>
       ))}
