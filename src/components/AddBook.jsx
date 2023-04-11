@@ -30,8 +30,8 @@ function AddBook() {
     <div>
       <h2>Add book</h2>
       <form style={{ display: 'flex', gap: '40px' }} onSubmit={submitForm}>
-        <input type="text" placeholder="add book name" value={bookName} onChange={handleBookName} />
-        <input type="text" placeholder="add author of book" value={author} onChange={handleAuthor} />
+        <input type="text" placeholder="add book name" value={bookName} onChange={handleBookName} required />
+        <input type="text" placeholder="add author of book" value={author} onChange={handleAuthor} required />
         <button type="submit">
           Add book
         </button>
