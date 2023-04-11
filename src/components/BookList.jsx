@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import RemoveBtn from './RemoveBtn';
 
 function BookList() {
   const { books } = useSelector((state) => state.books);
@@ -11,8 +12,8 @@ function BookList() {
           <p>{book.author}</p>
           <div style={{ display: 'flex', gap: '20px' }}>
             <button type="button">Comment</button>
-            <button type="button">Remove</button>
             <button type="button">Edit</button>
+            <RemoveBtn bookId={book.item_id} />
           </div>
         </div>
       ))}
