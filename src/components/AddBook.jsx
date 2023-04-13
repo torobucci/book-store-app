@@ -1,9 +1,9 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { addBook } from '../redux/books/bookSlice';
+import { v4 as uuid } from 'uuid';
+import { addNewBook, addBook } from '../redux/books/bookSlice';
 
 function AddBook() {
-  const { books } = useSelector((state) => state.books);
   const dispatch = useDispatch();
   const [bookName, setBookName] = useState('');
   const [author, setAuthor] = useState('');
@@ -16,12 +16,14 @@ function AddBook() {
   const submitForm = (e) => {
     e.preventDefault();
     if (bookName.trim() && author.trim()) {
-      dispatch(addBook({
-        item_id: `item${books.length + 1}`,
-        title: bookName,
+      const newBookDetails = {
         author,
-        category: 'Nonfiction',
-      }));
+        title: bookName,
+        category: 'Fiction',
+        item_id: uuid().slice(0, 5),
+      };
+      dispatch(addBook(newBookDetails));
+      dispatch(addNewBook(newBookDetails));
       setAuthor('');
       setBookName('');
     }
@@ -30,11 +32,21 @@ function AddBook() {
     <div>
       <h2>Add book</h2>
       <form style={{ display: 'flex', gap: '40px' }} onSubmit={submitForm}>
-        <input type="text" placeholder="add book name" value={bookName} onChange={handleBookName} required />
-        <input type="text" placeholder="add author of book" value={author} onChange={handleAuthor} required />
-        <button type="submit">
-          Add book
-        </button>
+        <input
+          type="text"
+          placeholder="add book name"
+          value={bookName}
+          onChange={handleBookName}
+          required
+        />
+        <input
+          type="text"
+          placeholder="add author of book"
+          value={author}
+          onChange={handleAuthor}
+          required
+        />
+        <button type="submit">Add book</button>
       </form>
     </div>
   );
