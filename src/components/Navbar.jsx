@@ -1,25 +1,24 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import style from './styles/Navbar.module.css';
 
 const links = [
-  { path: '/', text: 'Books' },
-  { path: 'categories', text: 'Categories' },
+  { path: '/', text: 'BOOKS' },
+  { path: 'categories', text: 'CATEGORIES' },
 ];
 function NavBar() {
   return (
-    <nav style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
-      <h1 style={{ fontFamily: 'monospace', fontSize: '30px' }}>Torobucii Book Store</h1>
-      <ul style={{
-        display: 'flex',
-        listStyleType: 'none',
-        gap: '80px',
-      }}
-      >
+    <nav className={style['nav-bar']}>
+      <h1 className={style['nav-brand']}>Book Store CMS</h1>
+      <ul className={style['nav-links']}>
         {links.map((link) => (
           <li key={link.text}>
-            <Link to={link.path} style={{ textDecoration: 'none' }}>{link.text}</Link>
+            <NavLink to={link.path}>{link.text}</NavLink>
           </li>
         ))}
       </ul>
+      <button type="button" className={style['icon-button']}><FontAwesomeIcon icon={faUser} className={style['fa-user']} aria-label="user-icon" /></button>
     </nav>
   );
 }
