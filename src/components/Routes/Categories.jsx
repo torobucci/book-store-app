@@ -1,7 +1,9 @@
+import style from '../styles/Categories.module.css';
+
 function Categories() {
   return (
-    <div>
-      <button type="button">Status</button>
+    <div className={style.container}>
+      <h1>Under Construction</h1>
     </div>
   );
 }
